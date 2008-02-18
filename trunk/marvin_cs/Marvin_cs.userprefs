@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<UserCombinePreferences filename="/home/david/Other projects/marvin_fall_07_08/marvin_cs/Marvin_cs/Marvin_cs.sln">
+  <Files>
+    <File filename="../../serial_class_test/serial_class_test/Program.cs" />
+    <File filename="./bmove.cs" />
+    <File filename="./motor.cs" />
+    <File filename="./serial.cs" />
+    <File filename="./Form1.cs" />
+  </Files>
+  <Views>
+    <ViewMemento Id="MonoDevelop.Ide.Gui.Pads.ProjectPad">
+      <TreeView>
+        <Node expanded="True">
+          <Node name="Marvin_cs" expanded="True">
+            <Node name="bmove.cs" expanded="False" selected="True" />
+          </Node>
+          <Node name="serial_class_test" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
+        </Node>
+      </TreeView>
+    </ViewMemento>
+    <ViewMemento Id="MonoDevelop.Ide.Gui.Pads.ClassPad">
+      <TreeView>
+        <Node expanded="True" />
+      </TreeView>
+    </ViewMemento>
+  </Views>
+  <Properties>
+    <Properties>
+      <Property key="ActiveConfiguration" value="Debug|Any CPU" />
+      <Property key="ActiveWindow" value="/home/david/Other projects/marvin_fall_07_08/marvin_cs/Marvin_cs/bmove.cs" />
+    </Properties>
+  </Properties>
+</UserCombinePreferences>
