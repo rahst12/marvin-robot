@@ -27,6 +27,8 @@ namespace serial_class_test
             
 //            SerialComm serialport = SerialComm.GetInstance();
 //            bmove basicmove = new bmove();
+			
+			
             logic marvinbrain = new logic();
             marvinbrain.followWall();
 

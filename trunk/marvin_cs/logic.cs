@@ -10,6 +10,7 @@ namespace Marvin_cs
         bool interupt = false;
         double angle = 0;
         double angleConstant = .2;
+        
         sensor sensors = new sensor();
         bmove basicmove = new bmove();
         int response = 100;
