@@ -1,0 +1,9 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\serial_class_test.exe
+bin\Debug\serial_class_test.pdb
+obj\Debug\serial_class_test.exe
+obj\Debug\serial_class_test.pdb
+bin\Debug\Marvin_cs.exe
+bin\Debug\Marvin_cs.pdb
+bin\Debug\Phidget21.NET.dll
+bin\Debug\Phidget21.NET.xml
