@@ -1,0 +1,9 @@
+------ Build started: Project: Marvin_cs, Configuration: Debug Any CPU ------
+Marvin_cs -> C:\Documents and Settings\Ryan\My Documents\marvin\source\windows\marvin_fall_07_08\marvin_cs\bin\Debug\Marvin_cs.exe
+------ Build started: Project: serial_class_test, Configuration: Debug Any CPU ------
+C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Csc.exe /noconfig /nowarn:1701,1702 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:"C:\Documents and Settings\Ryan\My Documents\marvin\source\windows\marvin_fall_07_08\marvin_cs\bin\Debug\Marvin_cs.exe" /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /debug+ /debug:full /optimize- /out:obj\Debug\serial_class_test.exe /target:exe Program.cs Properties\AssemblyInfo.cs
+C:\Documents and Settings\Ryan\My Documents\marvin\source\windows\marvin_fall_07_08\serial_class_test\serial_class_test\Program.cs(30,42): error CS0120: An object reference is required for the nonstatic field, method, or property 'serial_class_test.program.Logger(string)'
+C:\Documents and Settings\Ryan\My Documents\marvin\source\windows\marvin_fall_07_08\serial_class_test\serial_class_test\Program.cs(39,14): (Related location)
+
+Compile complete -- 1 errors, 0 warnings
+========== Build: 1 succeeded or up-to-date, 1 failed, 0 skipped ==========
