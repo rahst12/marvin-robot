@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Marvin_cs.Properties.Resources.resources
+obj\Debug\Marvin_cs.csproj.GenerateResource.Cache
+bin\Debug\Marvin_cs.exe
+bin\Debug\Marvin_cs.pdb
+obj\Debug\Marvin_cs.exe
+obj\Debug\Marvin_cs.pdb
+obj\Debug\Marvin_cs.Form1.resources
+bin\Debug\Phidget21.NET.dll
+bin\Debug\Phidget21.NET.xml
