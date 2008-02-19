@@ -19,7 +19,7 @@ namespace Marvin_cs
             //WINDOWS: COM5
             bool fsuccess;
 
-            comm = new SerialPort("COM7", 9600, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
+            comm = new SerialPort("COM9", 9600, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
             comm.Handshake = System.IO.Ports.Handshake.None;
             if (comm.IsOpen == true)  //true didn't work, so we're trying the number 1
                 comm.Close();
