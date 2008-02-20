@@ -15,15 +15,13 @@ namespace Marvin_cs
         sensor sensors = new sensor();
         
         int response = 50;
-        
+        Thread senthr;// new Thread(new ThreadStart(sensors.startSensor));
 
         public logic()
         {
-            Thread senthr = new Thread(new ThreadStart(sensors.startSensor));
+            senthr = 
             senthr.Start();
         }
-
-
 
         public void followWall()
         {
