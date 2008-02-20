@@ -34,7 +34,6 @@ namespace Marvin_cs
 
 		public sensor()
 		{
-			Console.WriteLine("DID I EVEN GET HERE?");
 			try
             {
                 //Initialize the InterfaceKit object
