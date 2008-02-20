@@ -23,7 +23,8 @@ namespace serial_class_test
 
         static void Main(string[] args)
         {
-            Console.Out.WriteLine("Testing sensors and logic!");
+            
+			Console.WriteLine("testing");
             //Singleton s = new Singleton.Instance();
             ///Singleton single = Singleton.GetInstance();
             
@@ -47,11 +48,6 @@ namespace serial_class_test
             Console.WriteLine(Environment.NewLine);
         }
 		
-		void Dispose()
-		{
-			Console.WriteLine("Closing now");
-			marvinbrain.close();
-		}		
 		
     }
 }
