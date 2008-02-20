@@ -15,10 +15,14 @@ namespace Marvin_cs
 	public class sensor
 	{
 		static InterfaceKit ifKit;
-        public delegate void LogHandler(string message);
-        public string Attach = "Not Set";
-        public string Detach = "Not Set";
-        public string Error = "Not Set";
+
+        public delegate void LogHandler(String message);
+
+        logger mylog = new logger("process.log");
+
+        public String Attach = "Not Set";
+        public String Detach = "Not Set";
+        public String Error = "Not Set";
         public String InputChange = "Not Set";
         public String OutputChange = "Not Set";
         public String SensorChange = "Not Set";
@@ -29,11 +33,15 @@ namespace Marvin_cs
         public Boolean frontIR;
         public Boolean frontBump;
 
-        public double wheelR;
-        public double wheelL;
+        public Double wheelR;
+        public Double wheelL;
 
-		public sensor()
+        // Declare a delegate that takes a single string parameter
+        // and has no return type.
+
+        public sensor()
 		{
+            
 			try
             {
                 //Initialize the InterfaceKit object
@@ -63,10 +71,18 @@ namespace Marvin_cs
 
         public void startSensor()
         {
+
+            // Crate an instance of the delegate, pointing to the logging function.
+            // This delegate will then be passed to the Process() function.
+            
+            //LogHandler myLogger = new LogHandler(log.Log);
+
+            //sensor mySensors = new sensor();
+
             ifKit.waitForAttachment();
 
             //Wait for user input so that we can wait and watch for some event data frm the phidget
-            Console.WriteLine("Press any key to end...");
+            Console.WriteLine("Press any key to end... Then press enter");
             Console.Read();
 
             //User input was rad so we'll terminate the program, so close the object
@@ -77,9 +93,15 @@ namespace Marvin_cs
 
             //If no expcetions where thrown at this point it is safe to terminate the program
             Console.WriteLine("ok");
+            mylog.Close();
         }
 
-
+        /*void Logger(string s)
+        {
+            this.txtSensor.Text += s;
+            this.txtSensor.Text += "\r\n";
+            this.txtSensor.Text += Environment.NewLine;
+        }*/
 
         // The use of the delegate is just like calling a function directly,
         // though we need to add a check to see if the delegate is null
@@ -89,7 +111,8 @@ namespace Marvin_cs
 
             if (logHandler != null)
             {
-                logHandler(get_outputchange());
+                logHandler(get_frontside());
+                logHandler(get_backside());
             }
         }
 
@@ -126,6 +149,7 @@ namespace Marvin_cs
         //Output change event handler...Display the output index and the new valu to the console
         void ifKit_OutputChange(object sender, OutputChangeEventArgs e)
         {
+
 			//sensor_filter(sender, e);
             //string name = "";
             //Console.WriteLine("Here is output change");
@@ -137,7 +161,10 @@ namespace Marvin_cs
         //Sensor Change event handler...Display the sensor index and it's new value to the console
         void ifKit_SensorChange(object sender, SensorChangeEventArgs e)
         {
-			sensor_filter(sender, e);
+
+            sensor_filter(sender, e);
+            LogHandler myLogger = new LogHandler(mylog.Log);
+            Process(myLogger);
 			//Console.WriteLine("here");
             //Console.WriteLine("{0} {1}, Value: {2}", e.Index, sensor_filter(sender, e), e.Value);
         }
@@ -145,10 +172,10 @@ namespace Marvin_cs
         // Static Function: To which is used in the Delegate. To call the Process()
         // function, we need to declare a logging function: Logger() that matches
         // the signature of the delegate.
-        static void Logger(string s)
-        {
+        //static void Logger(string s)
+        //{
             //Console.WriteLine(s);
-        }
+        //}
 
         static void set_loghandler(string s)
         {
@@ -188,6 +215,16 @@ namespace Marvin_cs
         public void set_sensorchange(string s)
         {
             SensorChange = s;
+        }
+
+        public String get_frontside()
+        {
+            return Convert.ToString(frontside);
+        }
+
+        public String get_backside()
+        {
+            return Convert.ToString(backside);
         }
 
         public string sensor_filter(object sender, SensorChangeEventArgs e)
