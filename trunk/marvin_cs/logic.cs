@@ -30,11 +30,23 @@ namespace Marvin_cs
             {
                 //OLD WHILE ((sensors.frontside - sensors.backside) > -40 && (sensors.frontside - sensors.backside) < 40)
                 //WHILE 2 (sensors.frontside > 200 && sensors.frontside < 300 && sensors.backside > 200 && sensors.backside < 300)
-                while ((sensors.frontside - sensors.backside) > -40 && (sensors.frontside - sensors.backside) < 40)
+                while (System.Math.Abs(sensors.frontside - sensors.backside) < 40)
 	            {
                     Console.WriteLine("normal " + (sensors.frontside - sensors.backside) );
                     basicmove.cruise();
 		            Thread.Sleep(response);
+					if (sensors.frontside < 300)
+					{
+						Console.WriteLine("too close.  front is: " + sensors.frontside + "  back:" + sensors.backside);
+						basicmove.turnright(3);
+						basicmove.cruise();
+					}
+					else if (sensors.frontside > 350)
+					{
+						Console.WriteLine("too far out. front is: " + sensors.frontside + "  back:" + sensors.backside);
+						basicmove.turnleft(3);
+						basicmove.cruise();
+					}
 	            }
                 angle = (Math.Abs(sensors.frontside - sensors.backside)) * angleConstant;  //Math.Tan(Math.Abs(sensors.frontside - sensors.backside))/7.8)
 	            if (angle > 90) angle = 90;
@@ -51,6 +63,17 @@ namespace Marvin_cs
             }
         }
 
+		public void close()
+		{
+			sensors.close();
+		}
+		
+		void Dispose()
+		{
+			Console.WriteLine("Closing now via logic class");
+			sensors.close();
+		}		
+		
 
     }
 }

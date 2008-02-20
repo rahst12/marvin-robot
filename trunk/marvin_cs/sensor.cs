@@ -116,6 +116,7 @@ namespace Marvin_cs
         //Input Change event handler...Display the input index and the new value to the console 
         void ifKit_InputChange(object sender, InputChangeEventArgs e)
         {
+			//sensor_filter(sender, e);
             //string name;
             //Console.WriteLine("Here is input change");
             //name = sensor_name(sender, e);
@@ -126,7 +127,8 @@ namespace Marvin_cs
         //Output change event handler...Display the output index and the new valu to the console
         void ifKit_OutputChange(object sender, OutputChangeEventArgs e)
         {
-            string name = "";
+			//sensor_filter(sender, e);
+            //string name = "";
             //Console.WriteLine("Here is output change");
             //set_outputchange(String.Format("Output index {0} value {1}", e.Index, e.Value.ToString()));
             //name = sensor_name(sender, e);
@@ -136,6 +138,8 @@ namespace Marvin_cs
         //Sensor Change event handler...Display the sensor index and it's new value to the console
         void ifKit_SensorChange(object sender, SensorChangeEventArgs e)
         {
+			sensor_filter(sender, e);
+			//Console.WriteLine("here");
             //Console.WriteLine("{0} {1}, Value: {2}", e.Index, sensor_filter(sender, e), e.Value);
         }
 
@@ -213,5 +217,14 @@ namespace Marvin_cs
 
             return names[e.Index.ToString()].ToString();
         }
+		
+		
+		public void close()
+		{
+			Console.WriteLine("Ending sensors now");
+			this.close();
+		}
+		
+		
 	}
 }

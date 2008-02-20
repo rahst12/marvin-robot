@@ -1,37 +1,28 @@
-<?xml version="1.0"?>
-<UserCombinePreferences filename="/home/david/Other projects/marvin/marvinmind/marvin-robot/marvin_cs/Marvin_cs.sln">
+﻿<UserCombinePreferences version="1.0" filename="/home/david/Other projects/marvin/marvin_cs/Marvin_cs.sln">
   <Files>
-    <File filename="Welcome" />
-    <File filename="./bmove.cs" />
-    <File filename="./serial.cs" />
-    <File filename="./logic.cs" />
-    <File filename="./sensor.cs" />
-    <File filename="../serial_class_test/serial_class_test/Program.cs" />
-    <File filename="./Form1.cs" />
+    <File name="Welcome" />
+    <File name="sensor.cs" line="221" column="4" />
+    <File name="logic.cs" line="66" column="3" />
+    <File name="Program.cs" line="1" column="1" />
+    <File name="Form1.cs" line="28" column="29" />
+    <File name="serial.cs" line="22" column="48" />
+    <File name="../serial_class_test/serial_class_test/Program.cs" line="1" column="1" />
   </Files>
   <Views>
-    <ViewMemento Id="MonoDevelop.Ide.Gui.Pads.ProjectPad">
-      <TreeView>
-        <Node expanded="True">
-          <Node name="Marvin_cs" expanded="True">
-            <Node name="Form1.cs" expanded="False" selected="True" />
-          </Node>
-          <Node name="serial_class_test" expanded="True">
-            <Node name="References" expanded="True" />
-          </Node>
+    <ViewMemento id="ProjectPad">
+      <Node expanded="True">
+        <Node name="Marvin_cs" expanded="True">
+          <Node name="Form1.cs" selected="True" />
         </Node>
-      </TreeView>
+        <Node name="serial_class_test" expanded="True" />
+      </Node>
     </ViewMemento>
-    <ViewMemento Id="MonoDevelop.Ide.Gui.Pads.ClassPad">
-      <TreeView>
-        <Node expanded="True" />
-      </TreeView>
+    <ViewMemento id="ClassPad">
+      <Node expanded="True" />
     </ViewMemento>
   </Views>
   <Properties>
-    <Properties>
-      <Property key="ActiveConfiguration" value="Debug|Any CPU" />
-      <Property key="ActiveWindow" value="/home/david/Other projects/marvin/marvinmind/marvin-robot/marvin_cs/Form1.cs" />
-    </Properties>
+    <Property key="ActiveWindow" value="/home/david/Other projects/marvin/marvin_cs/Form1.cs" />
+    <Property key="ActiveConfiguration" value="Debug|Any CPU" />
   </Properties>
 </UserCombinePreferences>
