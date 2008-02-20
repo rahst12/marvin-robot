@@ -17,20 +17,20 @@ namespace serial_class_test
         bool interupt = false;
         double angle = 0;
         double angleConstant = 1;
+		static bmove basicmove = new bmove();
+			
+        static logic marvinbrain = new logic();
 
         static void Main(string[] args)
         {
-            Console.Out.WriteLine("This will test to see if the serial port is functioning.");
-
+            Console.Out.WriteLine("Testing sensors and logic!");
             //Singleton s = new Singleton.Instance();
             ///Singleton single = Singleton.GetInstance();
             
-//            SerialComm serialport = SerialComm.GetInstance();
-//            bmove basicmove = new bmove();
-			
-			
-            logic marvinbrain = new logic();
-            marvinbrain.followWall();
+            //SerialComm serialport = SerialComm.GetInstance();
+            
+            
+			marvinbrain.followWall();
 
             //sensor mySensors = new sensor();
             //sensor.LogHandler myLogger = new sensor.LogHandler(Logger);
@@ -39,8 +39,6 @@ namespace serial_class_test
             //Debug.Assert("test" == " test", "this is happening because");
             //Debug.Assert(" Yes" == " Yes");
             //Debug.Assert("test" == " test", "this is happening because", "dave runs haxor leet linux");
-            Console.Out.WriteLine("I got here... Just as I should.. No Error");
-
         }
         void Logger(string s)
         {
@@ -48,5 +46,12 @@ namespace serial_class_test
             Console.WriteLine("\r\n");
             Console.WriteLine(Environment.NewLine);
         }
+		
+		void Dispose()
+		{
+			Console.WriteLine("Closing now");
+			marvinbrain.close();
+		}		
+		
     }
 }
