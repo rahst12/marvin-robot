@@ -1,3 +1,5 @@
+#define Linux   //Are we using linux?  Comment out if using windows.
+
 using System;
 using System.IO;
 using System.IO.Ports;
@@ -18,8 +20,14 @@ namespace Marvin_cs
             //LINUX:  /dev/ttyUSB0
             //WINDOWS: COM5
             bool fsuccess;
+			string path = "";
 
-            comm = new SerialPort("COM9", 9600, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
+#if Linux
+			path = "/dev/ttyUSB0";
+#else
+			path = "COM5";
+#endif
+            comm = new SerialPort(path, 9600, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
             comm.Handshake = System.IO.Ports.Handshake.None;
             if (comm.IsOpen == true)  //true didn't work, so we're trying the number 1
                 comm.Close();
