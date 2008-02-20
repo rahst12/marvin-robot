@@ -15,6 +15,7 @@ namespace Marvin_cs
 
         private SerialComm()
         {
+            //Linux and Windows OS is checked in the windows_or_unix_port() function
             //LINUX:  /dev/ttyUSB0
             //WINDOWS: COM5
             bool fsuccess;
@@ -39,12 +40,16 @@ namespace Marvin_cs
             {
                 Console.WriteLine("ERROR the port couldn't open.  Is it at the right port?  Details:");
                 Console.WriteLine(ex.ToString());
-                
-            
             }
 
         }
 
+        // This function allows serial to act as a singleton.  The singleton design pattern makes sure that only one instance
+        // of serial is ever running.  This is needed because we have two motor instances.  Each time a motor object is
+        // inialized it creates a new serial object.  The singleton creates a serial class inside itself and if it is already
+        // created it passes back the current instance.  Windows and Fedora has added security measures which locks the com port
+        // with the first instance which connects.  Debian based systems don't care how many instances of what is connected
+        //  to the com port and lets everything write to it.
         public static SerialComm GetInstance()
         {
             lock (typeof(SerialComm))
@@ -57,17 +62,15 @@ namespace Marvin_cs
             }
         }
 
+        // writes the information to the serial port.
         public void serial_write(byte motor, byte[] speed)
         {
-            //comm.Open();
             //bytes write in ascii
             byte[] bytCount = new byte[3];
             bytCount[0] = 255;
             bytCount[1] = motor;
             bytCount[2] = speed[0];
             comm.Write(bytCount, 0, 3);
-
-            //comm.Close();
         }
 
         //Determine whether you are on a windows or unix box
