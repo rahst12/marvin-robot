@@ -216,8 +216,7 @@ namespace Marvin_cs
 
             return names[e.Index.ToString()].ToString();
         }
-		
-		
+
 		public void close()
 		{
 			Console.WriteLine("Ending sensors now");

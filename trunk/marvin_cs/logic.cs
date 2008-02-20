@@ -23,9 +23,11 @@ namespace Marvin_cs
             senthr.Start();
         }
 
+
+
         public void followWall()
         {
-            
+
             while(interupt != true)
             {
                 //OLD WHILE ((sensors.frontside - sensors.backside) > -40 && (sensors.frontside - sensors.backside) < 40)

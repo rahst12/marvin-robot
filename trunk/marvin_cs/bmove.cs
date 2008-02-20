@@ -156,6 +156,4 @@ namespace Marvin_cs
         }
     }
 
-    // Special class was not transfered.  See original c++ code for this.
-
 }
