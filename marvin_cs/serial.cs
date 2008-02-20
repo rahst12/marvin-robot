@@ -84,7 +84,7 @@ namespace Marvin_cs
             Console.WriteLine(name.Contains("Windows"));
 			Console.WriteLine("Name: " + name);
             if (name.Contains("Windows"))
-                port = "COM10";
+                port = "COM5";
             else if (name.Contains("Unix")){
 				Console.WriteLine("Its unix!");
                 port = "/dev/ttyUSB0";}
