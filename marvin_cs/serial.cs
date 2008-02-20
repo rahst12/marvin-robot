@@ -82,10 +82,12 @@ namespace Marvin_cs
             String name = Convert.ToString(System.Environment.OSVersion);
             Console.WriteLine(System.Environment.OSVersion);
             Console.WriteLine(name.Contains("Windows"));
+			Console.WriteLine("Name: " + name);
             if (name.Contains("Windows"))
                 port = "COM10";
-            else if (name.Contains("Unix"))
-                port = "ttyUSB0";
+            else if (name.Contains("Unix")){
+				Console.WriteLine("Its unix!");
+                port = "/dev/ttyUSB0";}
             else
             {
                 Console.WriteLine("Tell the software developers that they don't currently have support for this OS");

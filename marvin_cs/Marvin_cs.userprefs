@@ -1,20 +1,21 @@
 ﻿<UserCombinePreferences version="1.0" filename="/home/david/Other projects/marvin/marvin_cs/Marvin_cs.sln">
   <Files>
     <File name="Welcome" />
-    <File name="sensor.cs" line="221" column="4" />
+    <File name="sensor.cs" line="222" column="1" />
     <File name="logic.cs" line="66" column="3" />
     <File name="Program.cs" line="1" column="1" />
     <File name="Form1.cs" line="28" column="29" />
-    <File name="serial.cs" line="22" column="48" />
-    <File name="../serial_class_test/serial_class_test/Program.cs" line="1" column="1" />
+    <File name="serial.cs" line="22" column="1" />
+    <File name="../serial_class_test/serial_class_test/Program.cs" line="38" column="31" />
   </Files>
   <Views>
     <ViewMemento id="ProjectPad">
       <Node expanded="True">
-        <Node name="Marvin_cs" expanded="True">
-          <Node name="Form1.cs" selected="True" />
+        <Node name="serial_class_test" expanded="True">
+          <Node name="References" expanded="True">
+            <Node name="Phidget21.NET1.1, Version=2.1.1.0, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52" selected="True" />
+          </Node>
         </Node>
-        <Node name="serial_class_test" expanded="True" />
       </Node>
     </ViewMemento>
     <ViewMemento id="ClassPad">
@@ -22,7 +23,7 @@
     </ViewMemento>
   </Views>
   <Properties>
-    <Property key="ActiveWindow" value="/home/david/Other projects/marvin/marvin_cs/Form1.cs" />
+    <Property key="ActiveWindow" value="/home/david/Other projects/marvin/serial_class_test/serial_class_test/Program.cs" />
     <Property key="ActiveConfiguration" value="Debug|Any CPU" />
   </Properties>
 </UserCombinePreferences>

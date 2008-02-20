@@ -89,11 +89,11 @@ namespace Marvin_cs
             this.txtSensor.Text += "\r\n";
             this.txtSensor.Text += Environment.NewLine;
         }
-		
-		protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-		{
-			Console.WriteLine("Closing now");
-			marvinbrain.close();
-		}
+//		
+//		protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+//		{
+//			Console.WriteLine("Closing now");
+//			marvinbrain.close();
+//		}
     }
 }
