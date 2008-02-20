@@ -19,7 +19,7 @@ namespace Marvin_cs
 
         public logic()
         {
-            senthr = 
+            senthr = new Thread(new ThreadStart(sensors.startSensor));
             senthr.Start();
         }
 
@@ -62,18 +62,12 @@ namespace Marvin_cs
 	            }
             }
         }
-
-		public void close()
-		{
-			sensors.close();
-		}
 		
 		void Dispose()
 		{
 			Console.WriteLine("Closing now via logic class");
-			sensors.close();
+            senthr.Abort();
 		}		
 		
-
     }
 }
