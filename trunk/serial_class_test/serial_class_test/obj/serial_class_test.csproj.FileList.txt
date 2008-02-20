@@ -6,11 +6,11 @@ obj\Debug\serial_class_test.pdb
 ./bin/Debug/Marvin_cs.exe
 ./bin/Debug/Phidget21.NET1.1.dll
 ./bin/Debug/Marvin_cs.pdb
-./bin/Release/serial_class_test.exe
-./bin/Release/serial_class_test.pdb
-./bin/Release/Marvin_cs.exe
-./bin/Release/Phidget21.NET1.1.dll
-./bin/Release/Marvin_cs.pdb
 obj\Release\ResolveAssemblyReference.cache
 obj\Release\serial_class_test.exe
 obj\Release\serial_class_test.pdb
+bin\Release\serial_class_test.exe
+bin\Release\serial_class_test.pdb
+bin\Release\Marvin_cs.exe
+bin\Release\Phidget21.NET1.1.dll
+bin\Release\Marvin_cs.pdb

@@ -1,5 +1,3 @@
-#define Linux   //Are we using linux?  Comment out if using windows.
-
 using System;
 using System.IO;
 using System.IO.Ports;
@@ -20,25 +18,29 @@ namespace Marvin_cs
             //LINUX:  /dev/ttyUSB0
             //WINDOWS: COM5
             bool fsuccess;
-			string path = "";
 
-#if Linux
-			path = "/dev/ttyUSB0";
-#else
-			path = "COM5";
-#endif
-            comm = new SerialPort(path, 9600, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
-            comm.Handshake = System.IO.Ports.Handshake.None;
-            if (comm.IsOpen == true)  //true didn't work, so we're trying the number 1
-                comm.Close();
-            comm.Open();
-            //comm.Close();
-            fsuccess = comm.IsOpen;
-            if (!fsuccess)
-                Console.WriteLine("Com1 failed to open");
-            else
+            try
             {
-                Console.WriteLine("/dev/ttyUSB0 opened successfully");
+                comm = new SerialPort(windows_or_unix_port(), 9600, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
+                comm.Handshake = System.IO.Ports.Handshake.None;
+                if (comm.IsOpen == true)  //true didn't work, so we're trying the number 1
+                    comm.Close();
+                comm.Open();
+                //comm.Close();
+                fsuccess = comm.IsOpen;
+                if (!fsuccess)
+                    Console.WriteLine("Com1 failed to open");
+                else
+                {
+                    Console.WriteLine("/dev/ttyUSB0 opened successfully");
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("ERROR the port couldn't open.  Is it at the right port?  Details:");
+                Console.WriteLine(ex.ToString());
+                
+            
             }
 
         }
@@ -66,6 +68,28 @@ namespace Marvin_cs
             comm.Write(bytCount, 0, 3);
 
             //comm.Close();
+        }
+
+        //Determine whether you are on a windows or unix box
+        //Returns either COM5 or ttyUSB0
+        public String windows_or_unix_port()
+        {
+
+            String port = "";
+            String name = Convert.ToString(System.Environment.OSVersion);
+            Console.WriteLine(System.Environment.OSVersion);
+            Console.WriteLine(name.Contains("Windows"));
+            if (name.Contains("Windows"))
+                port = "COM10";
+            else if (name.Contains("Unix"))
+                port = "ttyUSB0";
+            else
+            {
+                Console.WriteLine("Tell the software developers that they don't currently have support for this OS");
+                Console.WriteLine("They should refer to the function windows_or_unix_port() in serial.cs");
+                Console.WriteLine("Thanks, Dave and Ryan");
+            }
+            return port;
         }
     }
 }
