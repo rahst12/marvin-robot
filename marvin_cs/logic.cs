@@ -30,20 +30,20 @@ namespace Marvin_cs
             {
                 //OLD WHILE ((sensors.frontside - sensors.backside) > -40 && (sensors.frontside - sensors.backside) < 40)
                 //WHILE 2 (sensors.frontside > 200 && sensors.frontside < 300 && sensors.backside > 200 && sensors.backside < 300)
-                while (System.Math.Abs(sensors.frontside - sensors.backside) < 40)
+                while (System.Math.Abs(sensors.frontside - sensors.backside) < 100)
 	            {
-                    Console.WriteLine("normal " + (sensors.frontside - sensors.backside) );
+                    Console.WriteLine("Normal State | Tolerance: " + (sensors.frontside - sensors.backside) );
                     basicmove.cruise();
 		            Thread.Sleep(response);
-					if (sensors.frontside < 300)
+					if (sensors.frontside < 250)
 					{
-						Console.WriteLine("too close.  front is: " + sensors.frontside + "  back:" + sensors.backside);
+						Console.WriteLine("Too close | Front Sensor: " + sensors.frontside + "  Back Sensor:" + sensors.backside);
 						basicmove.turnright(3);
 						basicmove.cruise();
 					}
-					else if (sensors.frontside > 350)
+					else if (sensors.frontside > 500)
 					{
-						Console.WriteLine("too far out. front is: " + sensors.frontside + "  back:" + sensors.backside);
+						Console.WriteLine("Too far | Front Sensor: " + sensors.frontside + "  Back Sensor:" + sensors.backside);
 						basicmove.turnleft(3);
 						basicmove.cruise();
 					}
@@ -52,12 +52,12 @@ namespace Marvin_cs
 	            if (angle > 90) angle = 90;
 	            if (sensors.frontside < sensors.backside)
 	            {
-                    Console.WriteLine("Turning right " + angle + "  sensor values "+ (sensors.frontside - sensors.backside));
+                    Console.WriteLine("Turning right: " + angle + "° | Front Sensor: " + sensors.frontside + "  Back Sensor:" + sensors.backside);
 		            basicmove.turnright(angle);
 	            }
 	            else
 	            {
-                    Console.WriteLine("Turning left " + angle + "  sensor values " + (sensors.frontside - sensors.backside));
+                    Console.WriteLine("Turning left: " + angle + "° | Front Sensor: " + sensors.frontside + "  Back Sensor:" + sensors.backside);
 		            basicmove.turnleft(angle);
 	            }
             }
