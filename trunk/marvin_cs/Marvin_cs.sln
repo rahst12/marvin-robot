@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marvin_cs", "Marvin_cs.csproj", "{727FBF9C-9DFF-4ADD-8721-6E73B4A186AC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serial_class_test", "..\serial_class_test\serial_class_test\serial_class_test.csproj", "{831B75EC-BAC5-42EC-B9D4-341524B35211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marvin_cs", "Marvin_cs.csproj", "{727FBF9C-9DFF-4ADD-8721-6E73B4A186AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
