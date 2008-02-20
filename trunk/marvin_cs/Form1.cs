@@ -14,7 +14,7 @@ namespace Marvin_cs
         // and has no return type.
         //public delegate void LogHandler(string message);
         
-        logic marvinbrain = new logic();
+        //logic marvinbrain = new logic();
            	
         public Form1()
         {
@@ -25,7 +25,7 @@ namespace Marvin_cs
 
         private void Form1_Load(object sender, EventArgs e)
         {
-			marvinbrain.followWall();
+			//marvinbrain.followWall();
 			Console.WriteLine("NBLEFLADSFLASDLS");
             //SerialComm test = new SerialComm();
 
