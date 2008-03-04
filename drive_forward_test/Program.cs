@@ -9,12 +9,13 @@ namespace drive_forward_test
     {
         static void Main(string[] args)
         {
-            /*bmove basicmove = new bmove();
+            bmove basicmove = new bmove();
 
             basicmove.cruise();
-            basicmove.wait(10000);*/
-            sensor test = new sensor();
-            test.startSensor();
+            basicmove.wait(10000);
+            //logic mbrain = new logic();
+            //sensor test = new sensor();
+            //test.startSensor();
         }
     }
 }
