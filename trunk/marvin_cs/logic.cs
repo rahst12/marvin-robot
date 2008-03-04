@@ -23,6 +23,13 @@ namespace Marvin_cs
             senthr.Start();
         }
 
+        ~logic()
+        {
+            Console.WriteLine("Closing Now");
+            //Thread.Sleep(3000);
+            Console.ReadKey();
+        }
+
         public void followWall()
         {
 
@@ -63,11 +70,11 @@ namespace Marvin_cs
             }
         }
 		
-		void Dispose()
+		/*void Dispose()
 		{
 			Console.WriteLine("Closing now via logic class");
             senthr.Abort();
-		}		
+		}*/		
 		
     }
 }

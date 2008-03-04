@@ -24,7 +24,6 @@ namespace Marvin_cs
         {
             Console.WriteLine(s);
             streamWriter.WriteLine(s);
-            ///Close();
         }
 
         public void Close()
