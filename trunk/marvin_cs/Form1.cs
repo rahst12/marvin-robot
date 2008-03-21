@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Marvin_cs
 {
-    public partial class Form1 : Form
+    public partial class frmGUI : Form
     {
         // Declare a delegate that takes a single string parameter
         // and has no return type.
@@ -16,7 +16,7 @@ namespace Marvin_cs
         
         //logic marvinbrain = new logic();
            	
-        public Form1()
+        public frmGUI()
         {
 			
 			Console.WriteLine("1");
@@ -34,41 +34,6 @@ namespace Marvin_cs
 //            sensor mySensors = new sensor();
 //            sensor.LogHandler myLogger = new sensor.LogHandler(Logger);
 //            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
-//            mySensors.Process(myLogger);
 
         }
 
@@ -80,7 +45,8 @@ namespace Marvin_cs
 
         private void btForward_Click(object sender, EventArgs e)
         {
-            //basicmove.forward_speed_up();
+            Bmove basicmove = new Bmove();
+            basicmove.forward_speed_up();
         }
 
         void Logger(string s)

@@ -9,7 +9,7 @@ using System.Diagnostics;
 namespace Marvin_cs
 {
 
-    public class motor
+    public class Motor
     {
         SerialComm sh = SerialComm.GetInstance();
         byte motorname;
@@ -17,7 +17,7 @@ namespace Marvin_cs
         int speed;
         
 
-        public motor(byte motorAB, int set_speed)
+        public Motor(byte motorAB, int set_speed)
         {
             motorname = motorAB;
             speed = set_speed;

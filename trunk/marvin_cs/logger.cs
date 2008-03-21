@@ -6,14 +6,14 @@ using System.IO;
 
 namespace Marvin_cs
 {
-    public class logger
+    public class Logger
     {
         FileStream fileStream;
         StreamWriter streamWriter;
         public delegate void LogHandler(string message);
 
         // Constructor
-        public logger(string filename)
+        public Logger(string filename)
         {
             fileStream = new FileStream(filename, FileMode.Create);
             streamWriter = new StreamWriter(fileStream);
