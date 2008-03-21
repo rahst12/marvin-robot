@@ -17,9 +17,9 @@ namespace serial_class_test
         bool interupt = false;
         double angle = 0;
         double angleConstant = 1;
-		static bmove basicmove = new bmove();
+		static Bmove basicmove = new Bmove();
 			
-        static logic marvinbrain = new logic();
+        static Logic marvinbrain = new Logic();
 
         static void Main(string[] args)
         {
