@@ -12,6 +12,7 @@ namespace drive_forward_test
             bmove basicmove = new bmove();
 
             basicmove.cruise();
+            Console.WriteLine("Cruise executed");
             basicmove.wait(10000);
             //logic mbrain = new logic();
             //sensor test = new sensor();
