@@ -12,13 +12,13 @@ using Phidgets.Events;
 namespace Marvin_cs
 {
 
-	public class sensor
+	public class Sensor
 	{
 		static InterfaceKit ifKit;
 
         public delegate void LogHandler(String message);
 
-        logger mylog = new logger("process.log");
+        Logger mylog = new Logger("process.log");
 
         public String Attach = "Not Set";
         public String Detach = "Not Set";
@@ -39,7 +39,7 @@ namespace Marvin_cs
         // Declare a delegate that takes a single string parameter
         // and has no return type.
 
-        public sensor()
+        public Sensor()
 		{
             
 			try
@@ -111,7 +111,7 @@ namespace Marvin_cs
 
             if (logHandler != null)
             {
-                logHandler(get_frontside());
+                logHandler(Convert.ToString(get_frontside()));
                 logHandler(get_backside());
             }
         }
@@ -217,9 +217,13 @@ namespace Marvin_cs
             SensorChange = s;
         }
 
-        public String get_frontside()
+        /// <summary>
+        /// Returns the distance of the wall from the front side sensor
+        /// </summary>
+        /// <returns>double frontside</returns>
+        public Double get_frontside()
         {
-            return Convert.ToString(frontside);
+            return frontside;
         }
 
         public String get_backside()

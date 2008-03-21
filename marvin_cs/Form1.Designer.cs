@@ -1,6 +1,6 @@
 namespace Marvin_cs
 {
-    partial class Form1
+    partial class frmGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@ namespace Marvin_cs
         /// </summary>
         private void InitializeComponent()
         {
-            this.btTurn = new System.Windows.Forms.Button();
+            this.btTurnLeft = new System.Windows.Forms.Button();
             this.btForward = new System.Windows.Forms.Button();
             this.txtSensor = new System.Windows.Forms.TextBox();
             this.lbFrontSide = new System.Windows.Forms.Label();
@@ -40,21 +40,23 @@ namespace Marvin_cs
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btTurnRight = new System.Windows.Forms.Button();
+            this.tbDegrees = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btTurn
+            // btTurnLeft
             // 
-            this.btTurn.Location = new System.Drawing.Point(320, 58);
-            this.btTurn.Name = "btTurn";
-            this.btTurn.Size = new System.Drawing.Size(75, 23);
-            this.btTurn.TabIndex = 0;
-            this.btTurn.Text = "Turn Left";
-            this.btTurn.UseVisualStyleBackColor = true;
-            this.btTurn.Click += new System.EventHandler(this.btTurn_Click);
+            this.btTurnLeft.Location = new System.Drawing.Point(217, 78);
+            this.btTurnLeft.Name = "btTurnLeft";
+            this.btTurnLeft.Size = new System.Drawing.Size(75, 23);
+            this.btTurnLeft.TabIndex = 0;
+            this.btTurnLeft.Text = "Turn Left";
+            this.btTurnLeft.UseVisualStyleBackColor = true;
+            this.btTurnLeft.Click += new System.EventHandler(this.btTurn_Click);
             // 
             // btForward
             // 
-            this.btForward.Location = new System.Drawing.Point(135, 47);
+            this.btForward.Location = new System.Drawing.Point(308, 38);
             this.btForward.Name = "btForward";
             this.btForward.Size = new System.Drawing.Size(75, 23);
             this.btForward.TabIndex = 1;
@@ -64,7 +66,7 @@ namespace Marvin_cs
             // 
             // txtSensor
             // 
-            this.txtSensor.Location = new System.Drawing.Point(12, 389);
+            this.txtSensor.Location = new System.Drawing.Point(18, 294);
             this.txtSensor.Multiline = true;
             this.txtSensor.Name = "txtSensor";
             this.txtSensor.Size = new System.Drawing.Size(129, 103);
@@ -73,7 +75,7 @@ namespace Marvin_cs
             // lbFrontSide
             // 
             this.lbFrontSide.AutoSize = true;
-            this.lbFrontSide.Location = new System.Drawing.Point(9, 373);
+            this.lbFrontSide.Location = new System.Drawing.Point(15, 278);
             this.lbFrontSide.Name = "lbFrontSide";
             this.lbFrontSide.Size = new System.Drawing.Size(92, 13);
             this.lbFrontSide.TabIndex = 3;
@@ -82,7 +84,7 @@ namespace Marvin_cs
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 373);
+            this.label1.Location = new System.Drawing.Point(160, 278);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 5;
@@ -90,7 +92,7 @@ namespace Marvin_cs
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 389);
+            this.textBox1.Location = new System.Drawing.Point(163, 294);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(129, 103);
@@ -99,7 +101,7 @@ namespace Marvin_cs
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(299, 373);
+            this.label2.Location = new System.Drawing.Point(305, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 7;
@@ -107,7 +109,7 @@ namespace Marvin_cs
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(302, 389);
+            this.textBox2.Location = new System.Drawing.Point(308, 294);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(129, 103);
@@ -116,7 +118,7 @@ namespace Marvin_cs
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(444, 373);
+            this.label3.Location = new System.Drawing.Point(450, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 9;
@@ -124,7 +126,7 @@ namespace Marvin_cs
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(447, 389);
+            this.textBox3.Location = new System.Drawing.Point(453, 294);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(129, 103);
@@ -133,7 +135,7 @@ namespace Marvin_cs
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(588, 373);
+            this.label4.Location = new System.Drawing.Point(594, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 13);
             this.label4.TabIndex = 11;
@@ -141,17 +143,35 @@ namespace Marvin_cs
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(591, 389);
+            this.textBox4.Location = new System.Drawing.Point(597, 294);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(129, 103);
             this.textBox4.TabIndex = 10;
             // 
-            // Form1
+            // btTurnRight
+            // 
+            this.btTurnRight.Location = new System.Drawing.Point(401, 78);
+            this.btTurnRight.Name = "btTurnRight";
+            this.btTurnRight.Size = new System.Drawing.Size(75, 23);
+            this.btTurnRight.TabIndex = 12;
+            this.btTurnRight.Text = "Turn Right";
+            this.btTurnRight.UseVisualStyleBackColor = true;
+            // 
+            // tbDegrees
+            // 
+            this.tbDegrees.Location = new System.Drawing.Point(308, 81);
+            this.tbDegrees.Name = "tbDegrees";
+            this.tbDegrees.Size = new System.Drawing.Size(75, 20);
+            this.tbDegrees.TabIndex = 13;
+            // 
+            // frmGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 631);
+            this.ClientSize = new System.Drawing.Size(743, 415);
+            this.Controls.Add(this.tbDegrees);
+            this.Controls.Add(this.btTurnRight);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label3);
@@ -163,9 +183,9 @@ namespace Marvin_cs
             this.Controls.Add(this.lbFrontSide);
             this.Controls.Add(this.txtSensor);
             this.Controls.Add(this.btForward);
-            this.Controls.Add(this.btTurn);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.btTurnLeft);
+            this.Name = "frmGUI";
+            this.Text = "OutputGUI";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,7 +194,7 @@ namespace Marvin_cs
 
         #endregion
 
-        private System.Windows.Forms.Button btTurn;
+        private System.Windows.Forms.Button btTurnLeft;
         private System.Windows.Forms.Button btForward;
         private System.Windows.Forms.TextBox txtSensor;
         private System.Windows.Forms.Label lbFrontSide;
@@ -186,6 +206,8 @@ namespace Marvin_cs
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btTurnRight;
+        private System.Windows.Forms.TextBox tbDegrees;
     }
 }
 

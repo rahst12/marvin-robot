@@ -7,10 +7,10 @@ using System.Threading;
 
 namespace Marvin_cs
 {
-    public class bmove
+    public class Bmove
     {
-        private motor motorA = new motor(000, 0);
-        private motor motorB = new motor(001, 0);
+        private Motor motorA = new Motor(000, 0);
+        private Motor motorB = new Motor(001, 0);
         const int response = 200;    //Delay(in ms) between each command
         const Double friction = 1;          //for turning
         // 1 = apartment carpet
